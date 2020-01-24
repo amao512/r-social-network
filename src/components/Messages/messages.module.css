@@ -1,0 +1,20 @@
+.message_content {
+  padding: 0 10px;
+}
+
+.message_content h1 {
+  margin: 0;
+  padding: 10px 0 5px 5px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.messages {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5px;
+}
+
+.users {
+  border-right: 1px solid #d3d3d3;
+  padding-left: 15px;
+}

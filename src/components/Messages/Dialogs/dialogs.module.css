@@ -1,0 +1,41 @@
+.dialogs {
+  padding-left: 15px;
+}
+
+.sendMsg {
+  border-top: 1px solid #d3d3d3;
+  padding: 6px 10px;
+  background: #d3d3d3;
+  max-width: 98%;
+}
+.sendMsg input {
+  border: 1px solid #d3d3d3;;
+  background: #fff;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 4px 0 0 4px;;
+  outline: none;
+  transition: all .2s ease;
+  width: 85%;
+}
+
+.sendMsg input:focus {
+  border: 1px solid #232424;
+}
+
+.sendMsg button {
+  border: 1px solid #d3d3d3;
+  border-radius: 0 4px 4px 0;
+  background: #d3d3d3;
+  font-size: 18px;
+  transition: all .2s ease;
+  padding: 6px 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.sendMsg button:hover {
+  border: 1px solid #232424;
+  background: #232424;
+  color: #fff;
+}

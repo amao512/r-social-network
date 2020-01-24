@@ -1,0 +1,44 @@
+.shapka {
+  max-width: 100%;
+  height: 250px;
+}
+
+.shapka img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.inform {
+  position: absolute;
+  left: 50px;
+  top: 150px;
+  display: inline-flex;
+}
+
+.avatar {
+  height: 200px;
+  width: 150px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.about {
+  padding: 30px 10px 10px 30px;
+}
+
+.name {
+  color: #fff;
+  margin: 0;
+}
+
+.age {
+  color: #fff;
+}

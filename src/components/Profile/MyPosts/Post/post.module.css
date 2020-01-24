@@ -1,0 +1,23 @@
+.send_inform {
+  display: flex;
+  align-content: center;
+}
+
+.post_avatar {
+  width: 50px;
+  display: inline-flex;
+}
+
+.post_avatar img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.post_name {
+  padding-left: 20px;
+}
+
+.like {
+  text-align: end;
+  color: #232424;
+}

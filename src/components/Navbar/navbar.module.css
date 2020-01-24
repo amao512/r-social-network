@@ -1,0 +1,6 @@
+.navbar {
+  grid-area: sidebar;
+  top: 98px;
+  position: absolute;
+  width: 150px;
+}

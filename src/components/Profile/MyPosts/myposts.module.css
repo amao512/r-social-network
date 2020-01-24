@@ -1,0 +1,39 @@
+.my_posts {
+  margin-top: 150px;
+  padding: 20px 50px;
+}
+
+.add_post {
+  padding: 10px 0;
+  position: relative;
+}
+
+.add_post input {
+  border: 1px solid #d3d3d3;
+  border-radius: 4px 0 0 4px;
+  padding: 6px 12px;
+  outline: none;
+  font-size: 18px;
+  transition: all .2s ease;
+}
+
+.add_post input:focus {
+  border: 1px solid #232424;
+}
+
+.add_post button {
+  font-size: 18px;
+  background-color: #d3d3d3;
+  border: 1px solid #d3d3d3;
+  padding: 6px 12px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease;
+}
+
+.add_post button:hover {
+  background: #232424;
+  color: #fff;
+  border: 1px solid #232424;
+}
