@@ -13,8 +13,3 @@
   grid-template-columns: 1fr 2fr;
   grid-gap: 5px;
 }
-
-.users {
-  border-right: 1px solid #d3d3d3;
-  padding-left: 15px;
-}

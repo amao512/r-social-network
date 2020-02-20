@@ -1,0 +1,17 @@
+.auth_header {
+    display: inline-flex;
+    align-items: center;
+}
+
+.login {
+    padding-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.login_img img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}

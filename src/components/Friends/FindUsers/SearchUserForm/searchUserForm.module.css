@@ -1,0 +1,29 @@
+.search_user {
+    padding: 0 25px;
+    display: inline-flex;
+    justify-self: end;
+}
+
+.search_user input {
+    padding: 6px 12px;
+    outline: none;
+    width: 250px; 
+    border-radius: 4px 0 0 4px;
+    border: none;
+    border: 1px solid #232424;
+}
+
+.search_user button {
+    padding: 6px 12px;
+    border: 1px solid #232424;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    outline: none;
+}
+
+.search_user button:hover {
+    background-color: #232424;
+    color: #fff;
+}

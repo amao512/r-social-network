@@ -1,26 +1,23 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './links.module.css';
 import {NavLink} from 'react-router-dom';
 
-class Links extends Component {
-  render(){
-    let state = this.props.state;
-    
-    return (
-      <div className={styles.links}>
-        <ul>
-          {Object.keys(state).map((keyName, i) => (
-              <li key={keyName}>
-                <NavLink
-                  to={state[i].path}
-                  activeClassName={styles.active}
-                  className={styles.item}>{state[i].title}</NavLink>
-              </li>
-            ))}
-        </ul>
-      </div>
-    )
-  }
+const Links = ({navLinks, isAuth, logoutThunk}) => {
+  return (
+    <div className={styles.links}>
+      <ul>
+        {navLinks.map(link => (
+          <li key={link.id}>
+            <NavLink to={link.path}
+                     activeClassName={styles.active}
+                     className={styles.item}>{link.title}</NavLink>
+          </li>
+        ))}
+
+        {isAuth && <li onClick={logoutThunk} className={styles.signOut}>Sign out</li>}
+      </ul>
+    </div>
+  )
 }
 
 export default Links;

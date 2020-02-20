@@ -1,37 +1,21 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { onAddPost, onChangePost } from '../../../redux/profileReducer.js';
+import { onAddPost } from '../../../redux/profileReducer.js';
 import MyPosts from './MyPosts';
 
 
-class MyPostsComponent extends Component {
+const MyPostsContainer = props => {
 
-  addPost = () => {
-    this.props.onAddPost();
+  const addPost = postText => {
+    props.onAddPost(postText.postField);
+    postText.postField = '';
   }
 
-  changePost = e => {
-    this.props.onChangePost(e);
-  }
-
-  render(){
-
-    return (
-        <MyPosts 
-            onChangePost={this.changePost}
-            addPost={this.addPost}
-            state={this.props.state}
-        />
-    )
-  }
+  return <MyPosts {...props} addPost={addPost} />
 }
 
-const mapStateToStore = state => {
-  return {
+const mapStateToStore = state => ({
     state: state.profile
-  }
-}
+});
 
-const MyPostsContainer = connect(mapStateToStore, {onChangePost, onAddPost})(MyPostsComponent);
-
-export default MyPostsContainer;
+export default connect(mapStateToStore, { onAddPost })(MyPostsContainer);

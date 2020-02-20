@@ -1,37 +1,23 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { addMessageCreator, newMessageCreator} from './../../../redux/messagesReducer.js';
+import { addMessageCreator } from './../../../redux/messagesReducer.js';
 import Dialogs from './Dialogs';
 
-class DialogsComponent extends Component {
-  
-  newMessage = e => {
-    this.props.newMessageCreator(e);
+const DialogsComponent = ({addMessageCreator, dialogs}) => {
+  const sendMessage = formData => {
+    addMessageCreator(formData.messageField);
+    formData.messageField = '';
   }
 
-  sendMessage = () => {
-    this.props.addMessageCreator();
-  }
-
-  render(){  
-    return (
-      <Dialogs 
-          newMessage={this.newMessage}
-          sendMessage={this.sendMessage}
-          state={this.props.state}
-      />
-    )
-  }
+  return <Dialogs sendMessage={sendMessage} dialogs={dialogs} />
 };
 
 
 
-const mapStateToStore = state => {
-  return {
-    state: state.messages
-  }
-}
+const mapStateToStore = state => ({
+    dialogs: state.messages.dialogs
+});
 
-const DialogsContainer = connect(mapStateToStore, {addMessageCreator, newMessageCreator})(DialogsComponent);
+const DialogsContainer = connect(mapStateToStore, { addMessageCreator })(DialogsComponent);
 
 export default DialogsContainer;

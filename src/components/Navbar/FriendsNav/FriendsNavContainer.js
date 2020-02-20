@@ -1,13 +1,13 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import FriendsNav from './FriendsNav';
 
-
-const mapStateToStore = state => {
-  return {
-    state: state.friends
-  }
+const FriendsNavContainer = ({ friends }) => {
+  return <FriendsNav friends={friends} />
 }
 
-const FriendsNavContainer = connect(mapStateToStore)(FriendsNav);
+const mapStateToStore = state => ({
+    friends: state.friends.users
+})
 
-export default FriendsNavContainer;
+export default connect(mapStateToStore)(FriendsNavContainer);

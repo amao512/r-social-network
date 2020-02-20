@@ -31,3 +31,10 @@
 .active {
   color: #d3d3d3;
 }
+
+.signOut {
+  color: red;
+  width: 100%;
+  margin-left: 15px;
+  cursor: pointer;
+}

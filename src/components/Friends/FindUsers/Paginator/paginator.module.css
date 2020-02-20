@@ -1,0 +1,50 @@
+.paginator {
+    text-align: center;
+    padding: 10px 15px;
+    padding-top: 20px;
+}
+
+.paginator span {
+    margin: 0 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pageLists {
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pageLists:hover {
+    background-color: #232424;
+    color: #fff;
+}
+
+.currentPage {
+    display: inline-flex;
+    padding: 5px;
+    background-color: #232424;
+    border-radius: 4px;
+}
+
+.currentPage span {
+    color: #fff;
+}
+
+.leftBtn,
+.rightBtn {
+    border-radius: 4px;
+    border: 1px solid #232424;
+    padding: 6px 12px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.leftBtn:hover,
+.rightBtn:hover {
+    background-color: #232424;
+    color: #fff;
+}

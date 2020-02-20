@@ -5,12 +5,17 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import store from './redux/redux.js';
+import { BrowserRouter as Router} from 'react-router-dom';
 
+//setInterval(() => {
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,document.getElementById('root')
 );
+//}, 1000)
 
 
 // If you want your app to work offline and load faster, you can change

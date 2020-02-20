@@ -1,0 +1,61 @@
+.usersListComponent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    padding: 20px 10px;
+}
+
+.user {
+    display: grid;
+    padding: 10px;
+    border: 1px solid #868585;
+    border-radius: 4px;
+    transition: all .2s ease;
+}
+
+.user:hover {
+    background-color: #9ca0a0;
+}
+
+.user .avatar,
+.user_name,
+.follow_unfollow {
+    justify-self: center;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.follow,
+.unfollow {
+    padding: 6px 15px;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #232424;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease;
+}
+
+.follow {
+    background-color: #fff;
+    color: #000;
+}
+.follow:hover {
+    background-color: #232424;
+    color: #fff
+}
+
+.unfollow {
+    background-color: #232424;
+    color: #fff;
+}
+
+.unfollow:hover {
+    border-color: red;
+    color: red;
+}

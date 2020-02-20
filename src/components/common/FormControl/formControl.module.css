@@ -1,0 +1,9 @@
+.errorControl input,
+.errorControl span {
+    background-color: #fff;
+    color: red;
+}
+
+.errorControl input {
+    border: 1px solid red;
+}

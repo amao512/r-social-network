@@ -1,5 +1,4 @@
 const ADD_MESSAGE = 'ADD-MESSAGE';
-const NEW_MESSAGE = 'NEW-MESSAGE';
 
 let initialState = {
   users: [
@@ -14,7 +13,6 @@ let initialState = {
     {id: 3, message: 'HI'},
     {id: 4, message: 'Hello World!'},
   ],
-  newDialogs: '',
 };
 
 const messagesReducer = (state = initialState, action) => {
@@ -22,20 +20,13 @@ const messagesReducer = (state = initialState, action) => {
     case ADD_MESSAGE:
       return {
         ...state,
-        newDialogs: '',
-        dialogs: [...state.dialogs, {id: 5, message: state.newDialogs}]
-      }
-    case NEW_MESSAGE:
-      return {
-        ...state,
-        newDialogs: action.newMessageText
+        dialogs: [...state.dialogs, {id: 5, message: action.msgText}]
       }
     default:
       return state;
   }
 }
 
-export const addMessageCreator = () => ({ type: ADD_MESSAGE });
-export const newMessageCreator = text => ({ type: NEW_MESSAGE, newMessageText: text });
+export const addMessageCreator = msgText => ({ type: ADD_MESSAGE, msgText });
 
 export default messagesReducer;

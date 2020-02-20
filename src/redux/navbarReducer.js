@@ -1,10 +1,10 @@
 let initalState = [
-  {path: '/profile', title: 'Profile'},
-  {path: '/news', title: 'News'},
-  {path: '/messages', title: 'Messages'},
-  {path: '/friends', title: 'Friends'},
-  {path: '/music', title: 'Music'},
-  {path: '/video', title: 'Video'}
+  {id: 1, path: '/profile', title: 'Profile'},
+  {id: 2, path: '/news', title: 'News'},
+  {id: 3, path: '/messages', title: 'Messages'},
+  {id: 4, path: '/friends', title: 'Friends'},
+  {id: 5, path: '/music', title: 'Music'},
+  {id: 6, path: '/video', title: 'Video'}
 ];
 
 let navbarReducer = (state = initalState, action) => {

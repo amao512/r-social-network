@@ -1,28 +1,29 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './post.module.css';
 
-class Post extends Component {
-  render(){
-    return (
-      <div className={styles.post}>
-        <div className={styles.send_inform}>
-          <div className={styles.post_avatar}>
-            <img src={this.props.src} alt=''/>
-          </div>
-          <div className={styles.post_name}>
-            <h3>{this.props.name}</h3>
-          </div>
+const Post = ({src, name, text, count}) => {
+  return (
+    <div className={styles.post}>
+      <div className={styles.send_inform}>
+        <div className={styles.post_avatar}>
+          <img src={src} alt=''/>
         </div>
-        <div className={styles.post_text}>
-          <p>{this.props.text}</p>
+
+        <div className={styles.post_name}>
+          <h3>{name}</h3>
         </div>
-        <div className={styles.like}>
-          <span>{this.props.count}</span> like
-        </div>
-        <hr/>
       </div>
-    )
-  }
+
+      <div className={styles.post_text}>
+        <p>{text}</p>
+      </div>
+
+      <div className={styles.like}>
+        <span>{count}</span> like
+      </div>
+      <hr/>
+    </div>
+  )
 }
 
 export default Post;

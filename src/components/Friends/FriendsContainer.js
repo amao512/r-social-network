@@ -1,13 +1,15 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import Friends from './Friends';
-
-
-const mapStateToStore = state => {
-  return {
-    state: state.friends
-  }
+import { withAuthRedirect } from '../../hoc/withAuthRedirect';
+import { compose } from 'redux';
+ 
+const FriendsContainer = props => {
+    return <Friends {...props} />
 }
 
-const FriendsContainer = connect(mapStateToStore)(Friends);
+const mapStateToStore = state => ({
+  users: state.friends.users
+})
 
-export default FriendsContainer;
+export default compose(connect(mapStateToStore), withAuthRedirect)(FriendsContainer);

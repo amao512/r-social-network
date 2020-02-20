@@ -1,13 +1,15 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import Links from './Links';
+import { logoutThunk } from '../../../redux/authReducer';
 
-
-const mapStateToStore = state => {
-  return {
-    state: state.navbar
-  }
+const LinksContainer = props => {
+  return <Links {...props}/>
 }
 
-const LinksContainer = connect(mapStateToStore)(Links)
+const mapStateToStore = state => ({
+    navLinks: state.navbar,
+    isAuth: state.auth.isAuth
+})
 
-export default LinksContainer;
+export default connect(mapStateToStore, { logoutThunk })(LinksContainer);

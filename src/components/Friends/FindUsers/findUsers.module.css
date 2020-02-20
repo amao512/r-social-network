@@ -1,97 +1,23 @@
 .find_user {
-    padding: 15px 5px;
+    padding: 15px 15px;
     display: grid;
 }
 
-.user {
-    padding: 5px;
+.header {
     display: grid;
-    grid-template-columns: 130px 200px 1fr;
-    border-bottom: 1px solid #868585;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 10px 10px 5px;
 }
 
-.user img {
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-}
-
-.user_name {
-    justify-self: start;
-}
-
-.follow_unfollow {
-    justify-self: end;
-}
-
-.follow,
-.unfollow {
+.pastLink {
+    text-decoration: none;
+    color: #232424;
     padding: 6px 12px;
-    font-size: 18px;
-    margin-right: 30px;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: none;
+    width: 28px;
+    border: 1px solid #fff;
+    transition: all .2s ease;
 }
 
-.follow {
-    background-color: cadetblue;
+.pastLink:hover {
+    border-bottom: 1px solid #232424;
 }
-
-.unfollow {
-    background-color: crimson;
-}
-
-.search_user {
-    padding: 10px 10px;
-}
-
-.search_user input {
-    padding: 6px 12px;
-    outline: none;
-    width: 90%; 
-    border-radius: 4px 0 0 4px;
-    border: none;
-    border: 1px solid #232424;
-}
-
-.search_user button {
-    padding: 6px 12px;
-    border: 1px solid #232424;
-    background-color: #232424;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 0 4px 4px 0;
-    outline: none;
-}
-
-.search_user button:hover {
-    background-color: #d3d3d3;
-    color: #000;
-}
-
-.paginator {
-    text-align: center;
-    padding: 10px 20px;
-    width: 95%;
-    overflow-x: scroll;
-    padding-top: 20px;
-}
-
-.paginator span {
-    margin: 0 5px;
-    cursor: pointer;
-}
-.paginator span:hover {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.currentPage {
-    font-weight: bold;
-    font-size: 18px;
-}
-
