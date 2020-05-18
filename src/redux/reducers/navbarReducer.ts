@@ -1,3 +1,6 @@
+import { NavbarType } from '../../types/reduxTypes';
+
+
 let initalState = [
   {id: 1, path: '/profile', title: 'Profile'},
   {id: 2, path: '/news', title: 'News'},
@@ -5,9 +8,11 @@ let initalState = [
   {id: 4, path: '/friends', title: 'Friends'},
   {id: 5, path: '/music', title: 'Music'},
   {id: 6, path: '/video', title: 'Video'}
-];
+] as Array<NavbarType>;
 
-let navbarReducer = (state = initalState, action) => {
+type InitialStateType = typeof initalState
+
+let navbarReducer = (state = initalState, action: any): InitialStateType  => {
   return state;
 };
 

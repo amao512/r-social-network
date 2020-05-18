@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setCurrentPage, isLoading, setSearchUser, getUsersThunk, deleteUnfollowThunk, postFollowThunk } from '../../../redux/findUsersReducer';
+import { setCurrentPage, isLoading, setSearchUser } from '../../../redux/actions';
+import {  getUsersThunk, deleteUnfollowThunk, postFollowThunk } from '../../../redux/thunks/findUsersReducerThunk';
 import FindUsers from './FindUsers';
 import { withAuthRedirect } from '../../../hoc/withAuthRedirect';
 import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
-import { getUsers, getPageSize, getTotalUsersCount, getCurrentPage, getTerm, getIsLoading, getIsFollowingProgressing } from '../../../selectors/findUsers-selector';
+import { 
+  getUsers, getPageSize, getTotalUsersCount, getCurrentPage, 
+  getTerm, getIsLoading, getIsFollowingProgressing 
+} from '../../../selectors/findUsers-selector';
 
 class FindUsersContainer extends Component {
   componentDidMount(){

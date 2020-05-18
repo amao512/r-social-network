@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { onAddPost } from '../../../redux/profileReducer.js';
+import { onAddPost } from '../../../redux/actions';
 import MyPosts from './MyPosts';
 
 

@@ -4,10 +4,10 @@ import { Field, reduxForm } from 'redux-form';
 import { required } from '../../utils/validator/validator';
 import { Input } from '../common/FormControl/FormControl';
 import { connect } from 'react-redux';
-import { loginThunk } from '../../redux/authReducer';
+import { loginThunk } from '../../redux/thunks/authReducerThunk';
 import { Redirect } from 'react-router-dom';
 
-const LoginForm = ({handleSubmit, error, captchaUrl}) => {
+const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
     return (
         <form onSubmit={handleSubmit} >
             <div className={styles.input_form}>
@@ -33,7 +33,7 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
                 <label>remember me</label>
             </div>
 
-            {captchaUrl && <img src={captchaUrl}/>}
+            {captchaUrl && <img src={captchaUrl} alt='captchaUrl'/>}
             {captchaUrl && <Field component={'input'} name={'captcha'} className={styles.form_field} />}
 
             <div className={styles.input_form}>

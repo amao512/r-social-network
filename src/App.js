@@ -3,7 +3,7 @@ import './App.css';
 import {Route, Switch, withRouter, Redirect} from 'react-router-dom';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { initializingThunk } from './redux/appReducer';
+import { initializingThunk } from './redux/thunks/appReducerThunk';
 
 import HeaderContainer from './components/Header/HeaderContainer';
 import Navbar from './components/Navbar/Navbar';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Auth from './Auth';
 import { connect } from 'react-redux';
-import { getAuthThunk } from '../../redux/authReducer';
+import { getAuthThunk } from '../../redux/thunks/authReducerThunk';
 
 class AuthContainer extends Component {
     componentDidMount(){

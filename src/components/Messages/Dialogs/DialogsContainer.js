@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addMessageCreator } from './../../../redux/messagesReducer.js';
+import { addMessageCreator } from './../../../redux/actions';
 import Dialogs from './Dialogs';
 
-const DialogsComponent = ({addMessageCreator, dialogs}) => {
+const DialogsComponent = ({ addMessageCreator, dialogs }) => {
   const sendMessage = formData => {
     addMessageCreator(formData.messageField);
     formData.messageField = '';

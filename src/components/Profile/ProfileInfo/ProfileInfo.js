@@ -4,7 +4,7 @@ import male_img from '../../../assets/images/user4.png';
 import ProfileStatusContainer from './ProfileStatus/ProfileStatusContainer';
 import ProfileData from './ProfileData/ProfileData';
 
-const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveDetails}) => {
+const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, saveDetails }) => {
 
   const onSavePhoto = e => {
     if(e.target.files.length){
@@ -30,7 +30,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveDet
 
         <div className={styles.inform}>
           <div className={styles.avatar}>
-           <img src={profile.photos.large || male_img} alt="avatar" />
+           <img src={!profile.photos ? male_img : profile.photos.large} alt="avatar" />
            {isOwner && <input type='file' onChange={onSavePhoto} value="" className={styles.choosePhoto}/>}
           </div>
 

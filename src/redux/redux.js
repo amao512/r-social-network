@@ -1,13 +1,14 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
 import thunkMiddlewear from 'redux-thunk';
-import profileReducer from './profileReducer';
-import messagesReducer from './messagesReducer';
-import navbarReducer from './navbarReducer';
-import friendsReducer from './friendsReducer';
-import findUsersReducer from './findUsersReducer';
-import authReducer from './authReducer';
 import { reducer as formReducer } from 'redux-form';
-import AppReducer from './appReducer';
+
+import profileReducer from './reducers/profileReducer';
+import messagesReducer from './reducers/messagesReducer';
+import navbarReducer from './reducers/navbarReducer';
+import friendsReducer from './reducers/friendsReducer';
+import findUsersReducer from './reducers/findUsersReducer';
+import authReducer from './reducers/authReducer';
+import AppReducer from './reducers/appReducer';
 
 let reducers = combineReducers({
   profile: profileReducer,

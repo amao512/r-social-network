@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import {getProfileThunk, getStatusThunk, updateStatusThunk, savePhoto, saveDetails} from '../../redux/profileReducer';
+import { 
+    getProfileThunk, getStatusThunk, 
+    updateStatusThunk, savePhoto, saveDetails
+} from '../../redux/thunks/profileReducerThunk';
 import { withRouter } from 'react-router-dom';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 import { compose } from 'redux';
